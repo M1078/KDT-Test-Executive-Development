@@ -4,7 +4,7 @@
 
 This is the overview for a structured Test Executive program intended primarily for hardware/systems testing. It will be designed to run on Linux systems.  The program will have a spreadsheet type script generator that requires minimal if any software coding in order to execute.  It is intended to develop and run automated and semi-automated test systems and be used by Systems and Hardware Engineers using simple spreadsheet commands.  
 
-Designed to run on Linux ideally CentOS.
+Designed to run on a main Linux distribution ideally RHEL or maybe CentOS Stream.
 
 One major goal of this project is to be able to run the Executive on various Linux machines.  It could reside on a high-end server and it could also run on a Raspberry Pi.  An advantage to that is that overall test development could be accomplished very inexpensively during the development phase.  It would be ideal if the I/O hardware could also accomplished on Raspberry Pi and similar modules yielding a very inexpensive overall test system. 
 
@@ -28,7 +28,7 @@ A spreadsheet based script generator that will permit a complete test script to 
 
 A test executive screen that looks very similar to the script generator above but now with event times, measurements and results filled it.  This is also the screen of the executive that is controlling the test.  Here is where the test is started, paused, stopped.  It can also be run automatically or single stepped for troubleshooting or test development.
 
-The Text Executive would be written in **C/C++** to insure minimum latency in test execution.
+The Text Executive would be written in C/C++ to insure minimum latency during test execution. However initial code could easily be written in Python to speed up development.
 
 The actual test script that is running would be interpreted running for the most part one step at a time.  If the "step" is a single task then just that step would be run.  If a step is part of a group of related steps then the executive would be aware of that and run that group of steps.
 
